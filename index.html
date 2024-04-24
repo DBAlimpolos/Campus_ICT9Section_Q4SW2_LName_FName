@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q4 Seatwork 2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <style>
+      	body{
+      		font-family: Rockwell;
+      		}
+      	span{
+      		font-size: 40px;
+      		color: pink;
+      		}
+      	#kalu{
+      		margin-top: 60px;
+      		height: 370px;
+      		width: 530px;
+      	}
+     	#box{
+     		border: 2px dashed white;
+     	}
+     	#numX, #numY{
+     		background-color: gray;
+     		color: white;
+     		font-size: 30px;
+     	}
+     	#info{
+     		height: 35px;
+     		width:35px;
+     	}
+      
+    </style>
+</head>
+
+<body class="bg-secondary text-light">
+    <br><br>
+
+    <div class="container">
+    <div class="row">
+
+    <div class="col-md-5">
+    		<img src="https://careerprotocol.com/wp-content/uploads/2020/10/MBAmo-your-MBA-Admissions-Calculator.gif" id="kalu">
+    </div>
+
+   
+    <div class="col-md-6" id="box">
+    <h3>Hi, my name is <span>Kalu</span>. I'm here to give you a Math challenge. <br><br> Given: 
+     </h3>
+     <h5>
+    	<form class="form-group">
+    	<label>Enter a value for x:</label>
+    	<input class="form-control btn-default" type="number" id="numX">
+    	<br>
+    	<label>Enter a value for y:</label>
+    	<input class="form-control btn-default" type="number" id="numY">
+    	<br><br>
+
+    	<details ontoggle="message()">
+			<summary><img src="https://icon-library.com/images/info-icon-png/info-icon-png-10.jpg" id="info"></summary>
+				<i>Click the buttons below to calculate.</i>
+		</details>
+
+    	</form>
+    </h5>
+		
+    </div>
+  
+    
+</div>
+</div>
+    
+    <script>
+   
+
+    function product(){
+    var numX=document.getElementById("numX").value;
+    var numY=document.getElementById("numY").value;
+    var prod=numX * numY;
+    window.alert('The product of x and Y is ' + prod );
+    }
+	
+    function power(){
+    var numX=document.getElementById("numX").value;
+    var numY=document.getElementById("numY").value;
+    var exp=numX ** numY;
+    window.alert('x raised to y is ' + exp );
+    	
+    }
+     
+    function remainder(){
+    var numX=document.getElementById("numX").value;
+    var numY=document.getElementById("numY").value;
+    var mod=numX % numY;
+    window.alert('The remainder is ' + mod );
+    	
+    }
+     
+    function compare(){
+    var numX=document.getElementById("numX").value;
+    var numY=document.getElementById("numY").value;
+    var comp=Number(numX) == Number(numY);
+    window.alert('Is x equal to y? Answer: ' + comp );
+    	
+    }
+
+    function message() {
+			  alert("Let's go!");
+			}
+    </script>
+
+    <br><br><br>
+
+    <div class="container">
+    <div class="row">
+  	
+	    <div class="col-md-6">
+	    <button onclick="product()" type="submit" class="btn btn-success btn-block">product of x and y</button>
+	</div>
+	    <div class="col-md-6">
+	   <button onclick="power()" type="submit" class="btn btn-warning btn-block">x raise to y</button>
+	    </div>
+	
+	</div>
+<br>
+	<div class="row">
+  
+	    <div class="col-md-6">
+	    <button onclick="remainder()" type="submit" class="btn btn-danger btn-block">get the remainder</button>
+	     </div>
+	    <div class="col-md-6">
+	    <button onclick="compare()" type="submit" class="btn btn-info btn-block">check if x is equal to y</button>
+	    </div>
+  
+</div>
+
+
+</body>
+</html>
